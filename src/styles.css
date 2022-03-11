@@ -1,4 +1,4 @@
-/* @import "~bootstrap/dist/css/bootstrap.css" */
+@import url("~bootstrap/dist/css/bootstrap.css");
 /* You can add global styles to this file, and also import other style files */
 /* -------------------------------------------------------------------------- */
 /*                                    Fonts                                   */
@@ -9,7 +9,5 @@
 /* #Start */
 body {
   font-size: 14px;
-}
-* {
   font-family: "Raleway" sans-serif;
 }
