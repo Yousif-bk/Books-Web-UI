@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContentLayoutComponent } from './components/layout/content-layout/content-layout.component';
 import { RouterModule } from '@angular/router';
+import { SharedIconsModule } from './shared-icons.module';
 
 
 
@@ -18,6 +19,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     TranslationModule,
     RouterModule,
+    SharedIconsModule
   ]
 })
 export class SharedModule { }
