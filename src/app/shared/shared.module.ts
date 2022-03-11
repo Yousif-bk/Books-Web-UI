@@ -20,6 +20,10 @@ import { SharedIconsModule } from './shared-icons.module';
     TranslationModule,
     RouterModule,
     SharedIconsModule
+  ],
+  exports: [
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }

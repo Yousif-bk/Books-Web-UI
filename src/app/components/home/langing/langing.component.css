@@ -1,0 +1,167 @@
+:root {
+  --main-color: #2196f3;
+  --main-color-alt: #1787e0;
+  --main-transition: 0.3s;
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Lagre */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* Landing */
+.landing::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -40px;
+  height: 100%;
+  width: 100%;
+  background-color: #335eea0f;
+  z-index: -1;
+  transform-origin: top left;
+}
+svg {
+  width: 100%;
+}
+.landing .container {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  /* padding-bottom: 120px; */
+}
+.landing .container .text {
+  flex: 1;
+}
+@media (max-width: 991px) {
+  .landing .container .text {
+    text-align: center;
+  }
+}
+.landing .container .text h1 {
+  font-size: 40px;
+  margin: 0;
+  letter-spacing: -2px;
+}
+@media (max-width: 767px) {
+  .landing .container .text h1 {
+    font-size: 28px;
+  }
+}
+.landing .container .text p {
+  font-size: 23px;
+  line-height: 1.7;
+  margin: 5px 0 0;
+  color: #666;
+  max-width: 500px;
+}
+@media (max-width: 991px) {
+  .landing .container .text p {
+    margin: auto;
+  }
+}
+@media (max-width: 767px) {
+  .landing .container .text p {
+    font-size: 18px;
+  }
+}
+.landing .image img {
+  position: relative;
+  width: 600px;
+  animation: up-and-down 5s linear infinite;
+}
+@media (max-width: 991px) {
+  .landing .image {
+    display: none;
+  }
+}
+/* Animation */
+@keyframes up-and-down {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: -50px;
+  }
+}
+/* End Animation */
+.shape-bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.shape-bottom > * {
+  transform-origin: top center;
+}
+.shape-bottom-100 {
+  bottom: 100%;
+  left: 0;
+  right: 0;
+}
+.shape-bottom-100 > * {
+  transform-origin: top center;
+}
+.shape {
+  pointer-events: none;
+  position: absolute;
+}
+.shape-fluid-x > * {
+  height: auto;
+  width: 100%;
+}
+
+.shape > * {
+  display: block;
+}
+.shape:not([class*="shape-blur"]) {
+  overflow: hidden;
+}
+.shape:not([class*="shape-blur"]) > * {
+  transform: scale(2);
+}
+.position-relative {
+  position: relative;
+}
+svg {
+  vertical-align: middle;
+}
