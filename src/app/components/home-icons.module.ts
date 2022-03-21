@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faLongArrowAltRight, faSearch, faSync } from '@fortawesome/free-solid-svg-icons';
+import { faLongArrowAltRight, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -15,12 +15,11 @@ import { faLongArrowAltRight, faSearch, faSync } from '@fortawesome/free-solid-s
     FontAwesomeModule
   ]
 })
-export class SharedIconsModule {
+export class HomeIconsModule {
   constructor(library: FaIconLibrary) {
     library.addIcons(
-      faSync,
-      faSearch,
-      faLongArrowAltRight
+      faLongArrowAltRight,
+      faSearch
     );
   }
 }

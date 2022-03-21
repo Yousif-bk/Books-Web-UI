@@ -54,9 +54,9 @@ a {
   position: absolute;
   left: 0;
   top: -40px;
-  height: 100%;
+  height: 80%;
   width: 100%;
-  background-color: #335eea0f;
+  background-color: #ffffff;
   z-index: -1;
   transform-origin: top left;
 }
@@ -64,9 +64,10 @@ svg {
   width: 100%;
 }
 .landing .container {
-  min-height: calc(100vh - 72px);
+  min-height: calc(80vh - 72px);
   display: flex;
   align-items: center;
+  width: 100%;
   /* padding-bottom: 120px; */
 }
 .landing .container .text {
@@ -106,8 +107,8 @@ svg {
 }
 .landing .image img {
   position: relative;
-  width: 600px;
-  animation: up-and-down 5s linear infinite;
+  width: 780px;
+  /* animation: up-and-down 5s linear infinite; */
 }
 @media (max-width: 991px) {
   .landing .image {
@@ -125,6 +126,12 @@ svg {
   }
 }
 /* End Animation */
+svg {
+  vertical-align: middle;
+}
+.text-white {
+  color: #fff !important;
+}
 .shape-bottom {
   bottom: 0;
   left: 0;
@@ -164,4 +171,30 @@ svg {
 }
 svg {
   vertical-align: middle;
+}
+.shape-bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.shape {
+  pointer-events: none;
+  position: absolute;
+  background-color: rgb(54, 69, 79);
+}
+.shape > * {
+  display: block;
+}
+.shape:not([class*="shape-blur"]) {
+  overflow: hidden;
+}
+.shape:not([class*="shape-blur"]) > * {
+  transform: scale(2);
+}
+.shape-fluid-x > * {
+  height: auto;
+  width: 100%;
+}
+.position-relative {
+  position: relative !important;
 }

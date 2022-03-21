@@ -1,0 +1,353 @@
+.main-title {
+  margin: 0px auto 80px;
+  border: 2px solid black;
+  padding: 10px 20px;
+  font-size: 30px;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.main-title::before,
+.main-title::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #2196f3;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-title::after {
+  right: -30px;
+}
+.main-title::before {
+  left: -30px;
+}
+
+.main-title:hover::before {
+  z-index: -1;
+  animation: let-move 0.5s linear forwards;
+}
+.main-title:hover::after {
+  z-index: -1;
+  animation: right-move 0.5s linear forwards;
+}
+.main-title:hover {
+  color: white;
+  border: 2px solid white;
+  transition-delay: 0.5s;
+}
+.articles {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  background-color: #f2f6fc;
+}
+.articles .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+.articles .box {
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.articles .box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+}
+.articles .box .content {
+  padding: 20px;
+}
+.articles .box .content h3 {
+  margin: 0;
+}
+.articles .box .content p {
+  margin: 10px 0 0;
+  line-height: 1.5;
+  color: #777;
+}
+.articles .box .info {
+  padding: 20px;
+  border-top: 1px solid #e6e6e7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.articles .box .info a {
+  color: #2196f3;
+  font-weight: bold;
+  text-decoration: none;
+}
+.articles .box img {
+  width: 100%;
+  max-width: 100%;
+}
+.articles .box:hover .info i {
+  animation: moving-arrow 0.6s linear infinite;
+}
+
+/* Start Gallary */
+.gallery {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  /* background-color: #ececec; */
+}
+.gallery .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.gallery .container .box {
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
+    0px 2px 4px 0px rgb(0 0 0 / 12%);
+}
+.gallery .box img {
+  max-width: 100%;
+  transition: 0.3s;
+}
+.gallery .box .image:hover img {
+  transform: rotate(5deg) scale(1.1);
+}
+.gallery .box .image {
+  position: relative;
+  overflow: hidden;
+}
+.gallery .box .image::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255 255 255 / 20%);
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  z-index: 2;
+}
+.gallery .container .box .image:hover::before {
+  animation: flashing 0.7s;
+}
+/* End Gallary */
+/* Start Feature */
+.feature {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: white;
+  position: relative;
+}
+.feature .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.feature .box {
+  text-align: center;
+  border: 1px solid #ccc;
+}
+.feature .box .img-holder {
+  position: relative;
+  overflow: hidden;
+}
+.feature .box .img-holder::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.feature .box .img-holder::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0px 0px 170px 500px;
+  border-color: transparent transparent white transparent;
+  transition: 0.3s;
+}
+.feature .box .img-holder:hover::after {
+  border-width: 170px 500px 170px 0px;
+}
+.feature .box .img-holder img {
+  max-width: 100%;
+}
+.feature .box h2 {
+  position: relative;
+  font-size: 40px;
+  margin: auto;
+  width: fit-content;
+}
+.feature .box h2::after {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  left: 15px;
+  height: 5px;
+  background-color: red;
+  width: calc(100% - 30%);
+}
+.feature .box p {
+  line-height: 2;
+  font-size: 20px;
+  margin: 30px 0;
+  padding: 25px;
+  color: #777;
+}
+.feature .box a {
+  text-decoration: none;
+  display: block;
+  border: 3px solid;
+  width: fit-content;
+  margin: 0 auto 30px;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 10px 30px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.feature .quality a {
+  background-color: linear-gradient(to right #f44036 50% white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.feature .box:hover a {
+  background-position: left bottom;
+}
+.feature .quality .img-holder::before {
+  background-color: rgb(244 64 54 / 60%);
+}
+/* End Feature */
+
+/* Start Team */
+.team {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+.team .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+.team .box {
+  position: relative;
+}
+.team .box::before,
+.team .box::after {
+  content: "";
+  position: absolute;
+  background-color: #f3f3f3;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.team .box::before {
+  z-index: -2;
+  width: calc(100% - 60px);
+}
+.team .box::after {
+  z-index: -1;
+  background-color: #e4e4e4;
+  width: 0;
+}
+.team .box:hover::after {
+  width: calc(100% - 60px);
+}
+.team .box .data img {
+  width: calc(100% - 60px);
+}
+.team .box .data {
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+}
+.team .box .data .social {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team .box .data .social a {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.team .box .data .social a:hover i {
+  color: red;
+}
+.team .box .data .social i {
+  color: #777;
+}
+.team .box .info {
+  padding-left: 80px;
+}
+.team .box .info h3 {
+  margin-bottom: 0;
+  color: rebeccapurple;
+  font-size: 22px;
+  transition: 0.3s;
+}
+/* End Team */
+/* animation */
+@keyframes let-move {
+  50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 51%;
+    height: 100%;
+  }
+}
+
+@keyframes right-move {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+@keyframes moving-arrow {
+  100% {
+    transform: translateX(10px);
+  }
+}
+@keyframes flashing {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+}
+
+/* End animation */

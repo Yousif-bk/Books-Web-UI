@@ -19,7 +19,7 @@ import { SharedIconsModule } from './shared-icons.module';
     CommonModule,
     TranslationModule,
     RouterModule,
-    SharedIconsModule
+    SharedIconsModule,
   ],
   exports: [
     HeaderComponent,
