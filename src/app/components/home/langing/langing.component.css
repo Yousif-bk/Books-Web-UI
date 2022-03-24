@@ -8,12 +8,6 @@
 :before {
   box-sizing: border-box;
 }
-html {
-  scroll-behavior: smooth;
-}
-body {
-  font-family: "Cairo", sans-serif;
-}
 ul {
   list-style: none;
   margin: 0;
@@ -64,31 +58,51 @@ svg {
   width: 100%;
 }
 .landing .container {
-  min-height: calc(80vh - 72px);
+  min-height: calc(90vh - 72px);
   display: flex;
   align-items: center;
   width: 100%;
   /* padding-bottom: 120px; */
 }
-.landing .container .text {
+.landing .container .get-started {
   flex: 1;
 }
+.landing .container .get-started .buttons {
+  color: #0d6efd;
+  margin-top: 20px;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #377dff;
+  border-color: #377dff;
+  padding-right: 2.5rem !important;
+  padding-left: 2.5rem !important;
+}
+span {
+  padding: 20px 10px 20px 20px;
+  font-weight: 500;
+}
+.btn-primary:hover {
+  background-color: #066aff;
+}
+
 @media (max-width: 991px) {
-  .landing .container .text {
+  .landing .container .get-started {
     text-align: center;
   }
 }
-.landing .container .text h1 {
+.landing .container .get-started h1 {
   font-size: 40px;
   margin: 0;
+  font-weight: bold;
   letter-spacing: -2px;
 }
 @media (max-width: 767px) {
-  .landing .container .text h1 {
+  .landing .container .get-started h1 {
     font-size: 28px;
   }
 }
-.landing .container .text p {
+.landing .container .get-started p {
   font-size: 23px;
   line-height: 1.7;
   margin: 5px 0 0;
@@ -96,12 +110,12 @@ svg {
   max-width: 500px;
 }
 @media (max-width: 991px) {
-  .landing .container .text p {
+  .landing .container .get-started p {
     margin: auto;
   }
 }
 @media (max-width: 767px) {
-  .landing .container .text p {
+  .landing .container .get-started p {
     font-size: 18px;
   }
 }

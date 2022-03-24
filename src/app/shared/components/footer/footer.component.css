@@ -1,0 +1,25 @@
+.footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  background-color: #f2f6fc;
+}
+.list-inline-item {
+  position: relative;
+  margin-left: 0;
+  margin-right: -0.25rem;
+  list-style: none;
+  padding-right: 2rem;
+}
+.list-separator .list-inline-item:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: 0.8rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: "/";
+  opacity: 0.4;
+}
+a {
+  text-decoration: none;
+}
