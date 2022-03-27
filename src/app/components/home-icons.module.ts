@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faArrowDown, faArrowRight, faArrowUp, faCheck, faChevronRight, faLongArrowAltRight, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faArrowDown, faArrowRight, faArrowUp, faCheck, faChevronRight, faLongArrowAltRight, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -23,7 +23,8 @@ export class HomeIconsModule {
       faChevronRight,
       faCheck,
       faArrowDown,
-      faArrowUp
+      faArrowUp,
+      faAngleRight
     );
   }
 }
